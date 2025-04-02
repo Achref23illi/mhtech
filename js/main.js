@@ -19,18 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
  * Mobile Navigation Functionality
  * Toggles mobile menu and handles dropdown navigation with icons
  */
+/**
+ * Mobile Navigation and Dropdown Functionality
+ * Handles toggle for mobile menu and dropdown navigation
+ */
 function initMobileNavigation() {
-    // Create mobile menu toggle button
-    const header = document.querySelector('.main-header .container');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.main-nav');
-    const mobileMenuBtn = document.createElement('button');
     
-    mobileMenuBtn.className = 'mobile-menu-toggle';
-    mobileMenuBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
-    mobileMenuBtn.setAttribute('aria-label', 'Toggle menu');
-    
-    // Insert before nav element
-    header.insertBefore(mobileMenuBtn, nav);
+    // Check if elements exist
+    if (!mobileMenuBtn || !nav) return;
     
     // Toggle mobile menu
     mobileMenuBtn.addEventListener('click', () => {
@@ -42,78 +40,58 @@ function initMobileNavigation() {
         mobileMenuBtn.setAttribute('aria-expanded', expanded.toString());
     });
     
-    // Handle dropdown menus
+    // Handle dropdown behavior
     const dropdownItems = document.querySelectorAll('.has-dropdown');
     
     dropdownItems.forEach(item => {
-        // Create dropdown toggle with icon
         const link = item.querySelector('a');
+        const dropdown = item.querySelector('.mega-dropdown');
         
-        // Create dropdown menu container if it doesn't exist
-        let dropdownMenu = item.querySelector('.dropdown-menu');
-        if (!dropdownMenu) {
-            dropdownMenu = document.createElement('ul');
-            dropdownMenu.className = 'dropdown-menu';
-            item.appendChild(dropdownMenu);
-            
-            // Add dropdown items based on the section
-            if (link.textContent.trim() === 'Repair') {
-                createDropdownItem(dropdownMenu, 'refrigerator', 'Refrigerator Repair');
-                createDropdownItem(dropdownMenu, 'washer', 'Washer Repair');
-                createDropdownItem(dropdownMenu, 'dryer', 'Dryer Repair');
-                createDropdownItem(dropdownMenu, 'dishwasher', 'Dishwasher Repair');
-                createDropdownItem(dropdownMenu, 'stove', 'Stove Repair');
-                createDropdownItem(dropdownMenu, 'oven', 'Oven Repair');
-            } else if (link.textContent.trim() === 'Installation') {
-                createDropdownItem(dropdownMenu, 'appliance', 'Appliance Installation');
-                createDropdownItem(dropdownMenu, 'washer', 'Washer Installation');
-                createDropdownItem(dropdownMenu, 'dryer', 'Dryer Installation');
-                createDropdownItem(dropdownMenu, 'dishwasher', 'Dishwasher Installation');
-            }
-        }
+        // Skip if no link or dropdown found
+        if (!link || !dropdown) return;
         
-        // Create toggle button with arrow icon
-        const dropdownToggle = document.createElement('button');
-        dropdownToggle.className = 'dropdown-toggle';
-        dropdownToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
-        dropdownToggle.setAttribute('aria-label', 'Toggle dropdown menu');
-        dropdownToggle.setAttribute('aria-expanded', 'false');
-        
-        link.appendChild(dropdownToggle);
-        
-        // Toggle dropdown visibility
-        dropdownToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const isExpanded = item.classList.contains('open');
-            
-            // Close all dropdowns
-            dropdownItems.forEach(otherItem => {
-                otherItem.classList.remove('open');
-                const otherToggle = otherItem.querySelector('.dropdown-toggle');
-                if (otherToggle) {
-                    otherToggle.setAttribute('aria-expanded', 'false');
-                }
+        // For desktop: Show dropdown on hover
+        if (window.innerWidth >= 992) {
+            item.addEventListener('mouseenter', () => {
+                dropdown.classList.add('active');
             });
             
+            item.addEventListener('mouseleave', () => {
+                dropdown.classList.remove('active');
+            });
+        }
+        
+        // For all devices: Toggle dropdown on click
+        link.addEventListener('click', (e) => {
+            // Prevent navigation if dropdown exists
+            if (dropdown) {
+                e.preventDefault();
+            }
+            
             // Toggle current dropdown
-            if (!isExpanded) {
-                item.classList.add('open');
-                dropdownToggle.setAttribute('aria-expanded', 'true');
+            const isActive = dropdown.classList.contains('active');
+            
+            // Close all dropdowns first
+            document.querySelectorAll('.mega-dropdown').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Toggle the clicked dropdown
+            if (!isActive) {
+                dropdown.classList.add('active');
             }
         });
     });
     
-    // Close dropdowns when clicking outside
+    // Close dropdowns and mobile menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-            dropdownItems.forEach(item => {
-                item.classList.remove('open');
-                const toggle = item.querySelector('.dropdown-toggle');
-                if (toggle) {
-                    toggle.setAttribute('aria-expanded', 'false');
-                }
+        const isNavClick = nav.contains(e.target);
+        const isMenuBtnClick = mobileMenuBtn.contains(e.target);
+        
+        if (!isNavClick && !isMenuBtnClick) {
+            // Close all dropdowns
+            document.querySelectorAll('.mega-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
             });
             
             // Close mobile menu
@@ -123,6 +101,13 @@ function initMobileNavigation() {
         }
     });
 }
+
+// Add this function to your existing event listener
+document.addEventListener('DOMContentLoaded', () => {
+    // Other initialization functions
+    initMobileNavigation();
+    // ... other init functions
+});
 
 /**
  * Helper function to create dropdown menu items with icons
@@ -173,10 +158,16 @@ function getIconSvg(type) {
  * Appliance Slider Functionality
  * Handles the carousel for appliance types
  */
+/**
+ * Multi-item carousel with horizontal scrolling
+ */
 function initApplianceSlider() {
     const slider = document.querySelector('.appliance-slider');
     
-    if (!slider) return;
+    if (!slider) {
+        console.error('Appliance slider not found');
+        return;
+    }
     
     const slidesContainer = slider.querySelector('.appliance-slides');
     const prevBtn = slider.querySelector('.slider-prev');
@@ -184,40 +175,59 @@ function initApplianceSlider() {
     const dots = document.querySelectorAll('.slider-dots .dot');
     const slides = slidesContainer.querySelectorAll('.appliance-item');
     
-    if (!slides.length) return;
+    if (!slidesContainer || !slides.length) {
+        console.error('Slider elements missing');
+        return;
+    }
     
-    let currentSlide = 0;
+    // Variables
+    let currentIndex = 0;
     const slidesToShow = getSlidesToShow();
+    let slideWidth = 0;
     
-    // Determine number of slides to show based on screen width
+    // Get number of slides to show based on screen width
     function getSlidesToShow() {
         if (window.innerWidth < 576) return 1;
         if (window.innerWidth < 768) return 2;
         if (window.innerWidth < 992) return 3;
-        return 5; // Default for desktop
+        if (window.innerWidth < 1200) return 4;
+        return 5; // Default for large desktop
     }
     
-    // Update slider on window resize
-    window.addEventListener('resize', () => {
-        const newSlidesToShow = getSlidesToShow();
-        if (newSlidesToShow !== slidesToShow) {
-            goToSlide(0); // Reset to first slide on resize
-        }
-    });
+    // Calculate dimensions
+    function calculateDimensions() {
+        // Calculate individual slide width
+        const containerWidth = slidesContainer.clientWidth;
+        slideWidth = Math.floor(containerWidth / slidesToShow);
+        
+        // Apply width to slides
+        slides.forEach(slide => {
+            slide.style.width = `${slideWidth}px`;
+        });
+        
+        // Update current scroll position
+        scrollToSlide(currentIndex);
+    }
     
-    // Go to specific slide
-    function goToSlide(slideIndex) {
-        if (slideIndex < 0) {
-            slideIndex = 0;
-        } else if (slideIndex > slides.length - slidesToShow) {
-            slideIndex = slides.length - slidesToShow;
+    // Scroll to specific slide
+    function scrollToSlide(index) {
+        // Ensure index is within bounds
+        if (index < 0) {
+            index = 0;
+        } else if (index > slides.length - slidesToShow) {
+            index = slides.length - slidesToShow;
         }
         
-        currentSlide = slideIndex;
+        currentIndex = index;
         
         // Calculate scroll position
-        const slideWidth = slides[0].offsetWidth;
-        slidesContainer.scrollLeft = slideIndex * slideWidth;
+        const scrollLeft = index * slideWidth;
+        
+        // Scroll the container smoothly
+        slidesContainer.scrollTo({
+            left: scrollLeft,
+            behavior: 'smooth'
+        });
         
         // Update active dot
         updateActiveDot();
@@ -225,31 +235,65 @@ function initApplianceSlider() {
     
     // Update active dot indicator
     function updateActiveDot() {
+        // Calculate which dot should be active
+        // For multi-item carousels, we can divide the slider into "pages"
+        const totalPages = Math.ceil(slides.length / slidesToShow);
+        const activePage = Math.floor(currentIndex / slidesToShow);
+        
+        // Set the active dot based on current page
         dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
+            dot.classList.toggle('active', index === activePage);
         });
     }
     
-    // Next slide
-    nextBtn.addEventListener('click', () => {
-        goToSlide(currentSlide + 1);
-    });
-    
-    // Previous slide
-    prevBtn.addEventListener('click', () => {
-        goToSlide(currentSlide - 1);
-    });
-    
-    // Dot navigation
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            goToSlide(index);
+    // Set up navigation buttons
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            scrollToSlide(currentIndex - slidesToShow);
         });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            scrollToSlide(currentIndex + slidesToShow);
+        });
+    }
+    
+    // Set up dot navigation
+    if (dots.length) {
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                // Each dot represents a "page" of slides
+                scrollToSlide(index * slidesToShow);
+            });
+        });
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        calculateDimensions();
     });
     
-    // Initialize slider position
-    goToSlide(0);
+    // Initialize slider
+    calculateDimensions();
+    
+    // Monitor for scroll events
+    slidesContainer.addEventListener('scroll', () => {
+        // Get the current scroll position
+        const scrollPosition = slidesContainer.scrollLeft;
+        
+        // Determine which slide is most visible
+        currentIndex = Math.round(scrollPosition / slideWidth);
+        
+        // Update active dot
+        updateActiveDot();
+    });
 }
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initApplianceSlider();
+});
 
 /**
  * FAQ Accordion Functionality

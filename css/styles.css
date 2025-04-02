@@ -185,6 +185,8 @@ section:nth-child(even) {
     max-height: 60px;
 }
 
+/* Add these styles to your styles.css file */
+
 /* ====== NAVIGATION & MEGA DROPDOWN STYLES ====== */
 .main-nav .primary-menu {
     display: flex;
@@ -216,7 +218,7 @@ section:nth-child(even) {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 280px; /* Set width for standard dropdowns */
     background-color: white;
     border-top: 1px solid var(--border-color);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -225,12 +227,20 @@ section:nth-child(even) {
     padding: 20px 0;
 }
 
+/* Make repair dropdown wider (full width) */
+#repair-dropdown, #installation-dropdown {
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .mega-dropdown.active {
     display: block;
 }
 
 .dropdown-items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 20px;
 }
@@ -312,10 +322,12 @@ section:nth-child(even) {
     
     .mega-dropdown {
         position: static;
+        width: 100%;
         box-shadow: none;
         padding: 10px 0;
         border-top: none;
         margin-top: 10px;
+        transform: none;
     }
     
     .dropdown-items {
@@ -327,6 +339,8 @@ section:nth-child(even) {
         flex-direction: row;
         text-align: left;
         padding: 10px;
+        justify-content: flex-start;
+        width: 100%;
     }
     
     .dropdown-item svg {
@@ -334,7 +348,6 @@ section:nth-child(even) {
         margin-right: 10px;
     }
 }
-
 /* ====== HERO SECTION ====== */
 .hero-section {
     padding: var(--spacing-xl) 0;
@@ -476,12 +489,15 @@ section:nth-child(even) {
     margin-right: 10px;
 }
 
+/* Multi-item carousel with horizontal scrolling */
 .appliance-slider {
     position: relative;
     margin: 40px 0;
+    padding: 0 50px; /* Space for navigation buttons */
 }
 
-.slider-prev, .slider-next {
+.slider-prev, 
+.slider-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -495,40 +511,82 @@ section:nth-child(even) {
     justify-content: center;
     cursor: pointer;
     z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.slider-prev:hover, 
+.slider-next:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .slider-prev {
-    left: -20px;
+    left: 5px;
 }
 
 .slider-next {
-    right: -20px;
+    right: 5px;
 }
 
 .appliance-slides {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
-    -ms-overflow-style: none;  /* Hide scrollbar IE and Edge */
-    scrollbar-width: none;  /* Hide scrollbar Firefox */
-}
-
-.appliance-slides::-webkit-scrollbar {
-    display: none; /* Hide scrollbar Chrome, Safari and Opera */
+    padding: 10px 0;
 }
 
 .appliance-item {
-    flex: 0 0 20%;
+    flex: 0 0 20%; /* Show 5 items at once on desktop */
     min-width: 200px;
-    padding: 15px;
+    padding: 10px;
+    box-sizing: border-box;
     text-align: center;
 }
 
 .appliance-item img {
     height: 120px;
-    margin-bottom: 15px;
+    width: auto;
+    margin: 0 auto 15px;
+    display: block;
+    object-fit: contain;
 }
 
+.appliance-item h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.appliance-item p {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .appliance-item {
+        flex: 0 0 25%; /* 4 items on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .appliance-item {
+        flex: 0 0 33.333%; /* 3 items on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .appliance-item {
+        flex: 0 0 50%; /* 2 items on small tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .appliance-item {
+        flex: 0 0 100%; /* 1 item on mobile */
+    }
+}
+
+/* Dot navigation */
 .slider-dots {
     display: flex;
     justify-content: center;
@@ -546,6 +604,11 @@ section:nth-child(even) {
 
 .dot.active {
     background-color: var(--primary-color);
+}
+
+/* Hide any duplicate dot containers */
+.slider-dots + .slider-dots {
+    display: none !important;
 }
 
 /* ====== WARRANTY SECTION ====== */
