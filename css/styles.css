@@ -396,29 +396,75 @@ section:nth-child(even) {
     margin-top: 30px;
 }
 
-/* ====== BRAND LOGOS SECTION ====== */
+/* Brand Logo Carousel Styles */
 .brand-logos {
+    background-color: white;
     padding: var(--spacing-lg) 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+    overflow: hidden; /* Prevents horizontal scrollbar */
+    width: 100%;
+    margin: 0;
+}
+
+.brand-logos .container {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    max-width: 100%; /* Take full width */
+    padding: 0; /* Remove padding to allow full width */
+}
+
+.logos-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
 }
 
 .logos-slider {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    animation: slideLogos 20s linear infinite; /* Continuous animation */
+    width: max-content; /* Ensures container is as wide as needed */
+    background-color: white;
 }
 
-.logos-slider img {
-    height: 40px;
-    margin: 10px;
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px; /* Increase horizontal spacing */
+    background-color: white;
+}
+
+.logo-item img {
+    height: 50px; /* Increased from 40px to make logos bigger */
+    max-width: 100%;
     opacity: 0.7;
     transition: opacity 0.3s;
+    object-fit: contain;
 }
 
-.logos-slider img:hover {
-    opacity: 1;
+/* Animation for continuous scrolling */
+@keyframes slideLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move to half the width for seamless loop */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-item {
+        padding: 0 15px;
+    }
+    
+    .logo-item img {
+        height: 30px;
+    }
 }
 
 /* ====== TRUSTED SERVICES SECTION ====== */

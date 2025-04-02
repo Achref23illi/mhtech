@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initApplianceSlider();
     initFaqAccordion();
     initTestimonialSlider();
+    initBrandLogoCarousel();
 });
 
 /**
@@ -23,6 +24,54 @@ document.addEventListener('DOMContentLoaded', () => {
  * Mobile Navigation and Dropdown Functionality
  * Handles toggle for mobile menu and dropdown navigation
  */
+
+/**
+ * Initialize the continuously scrolling brand logo carousel
+ * This creates a seamless infinite loop effect
+ */
+function initBrandLogoCarousel() {
+    const sliderContainer = document.querySelector('.logos-slider-container');
+    const slider = document.querySelector('.logos-slider');
+    
+    if (!slider || !sliderContainer) {
+        console.error('Brand logo slider elements not found');
+        return;
+    }
+    
+    // Get all logo items
+    const logoItems = slider.querySelectorAll('.logo-item');
+    
+    if (!logoItems.length) {
+        console.error('No logo items found in the slider');
+        return;
+    }
+    
+    // Clone all logo items and append to create the continuous effect
+    logoItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        slider.appendChild(clone);
+    });
+    
+    // Optional: Adjust animation speed based on number of logos
+    const speed = Math.max(20, logoItems.length * 2); // Base speed on quantity
+    slider.style.animationDuration = `${speed}s`;
+    
+    // Optional: Add pause on hover functionality
+    slider.addEventListener('mouseenter', () => {
+        slider.style.animationPlayState = 'paused';
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        slider.style.animationPlayState = 'running';
+    });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initBrandLogoCarousel();
+});
+
+
 function initMobileNavigation() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.main-nav');
