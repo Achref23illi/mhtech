@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Service Tech - Services de réparation et d'installation d'appareils électroménagers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/form.js" defer></script>
+</head>
+<body>
+    <!-- Top navigation bar -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="facebook-icon"></i></a>
+                <a href="#" aria-label="YouTube"><i class="youtube-icon"></i></a>
+            </div>
+            <div class="secondary-nav">
+                <a href="about.html">About</a>
+                <a href="terms.html">Terms And Conditions</a>
+                <a href="warranty.html">Warranty</a>
+                <a href="cancellation.html">Cancellation Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main header with navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="VM Service Tech - Home Appliance Repair Service">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="primary-menu">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <div id="repair-dropdown" class="mega-dropdown">
+                            <div class="container">
+                                <div class="dropdown-items">
+                                    <a href="refrigerator-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="4" y1="10" x2="20" y2="10"></line><line x1="12" y1="14" x2="12" y2="16"></line></svg>
+                                        <span>Refrigerator Repair</span>
+                                    </a>
+                                    <a href="washer-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+                                        <span>Washer Repair</span>
+                                    </a>
+                                    <a href="dryer-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path></svg>
+                                        <span>Dryer Repair</span>
+                                    </a>
+                                    <a href="dishwasher-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg>
+                                        <span>Dishwasher Repair</span>
+                                    </a>
+                                    <a href="stove-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><circle cx="8" cy="8" r="2"></circle><circle cx="16" cy="8" r="2"></circle></svg>
+                                        <span>Stove Repair</span>
+                                    </a>
+                                    <a href="oven-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="4" y1="8" x2="20" y2="8"></line></svg>
+                                        <span>Oven Repair</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                    <li class="has-dropdown">
+                        <a href="installation.html">Installation<svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                    </li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Appliance Repair & Installation Services</h1>
+                <p>At VM Service Tech, we're dedicated to delivering swift and effective appliance repair and installation services that you can rely on. Our mission is simple: to reduce any inconvenience caused by appliance issues and swiftly restore your appliances to full functionality. Count on us to get the job done promptly and efficiently, so you can get back to enjoying your home without interruption.</p>
+                
+                <div class="service-areas">
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>Montreal</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>Vaudreuil-Dorion</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>North Shore</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>West Island</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>Laval</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>South Shore</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="tel:(438)800-7676" class="btn btn-primary">
+                        <i class="phone-icon"></i>(438) 800-7676
+                    </a>
+                    <a href="booking.html" class="btn btn-secondary">Request Service</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-image.webp" alt="Appliance repair technician with washing machine and refrigerator">
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Logos Section -->
+    <section class="brand-logos">
+        <div class="container">
+            <div class="logos-slider">
+                <img src="assets/images/brands/LG.webp" alt="LG">
+                <img src="assets/images/brands/KitchenAid.webp" alt="KitchenAid">
+                <img src="assets/images/brands/GE-Appliances.webp" alt="GE Appliances">
+                <img src="assets/images/brands/Kenmore.webp" alt="Kenmore">
+                <img src="assets/images/brands/Bosch.webp" alt="Bosch">
+                <img src="assets/images/brands/Frigidaire.webp" alt="Frigidaire">
+                <img src="assets/images/brands/Electrolux.webp" alt="Electrolux">
+                <img src="assets/images/brands/Danby.webp" alt="Danby">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Services Section -->
+    <section class="trusted-services">
+        <div class="container">
+            <h2>Trusted Appliance Repair Services In Greater Montreal</h2>
+            <p>Welcome to VM Service Tech, your premier destination for expert appliance repair services in Greater Montreal. Established in 2016, we've rapidly grown into a trusted name in the industry, driven by our unwavering dedication to customer satisfaction. At VM Service Tech, we pride ourselves on delivering fast, reliable repairs for all your household appliances, from refrigerators to washing machines and everything in between. As we continue to expand our service areas, our commitment to excellence remains unchanged. Join countless satisfied customers and experience the difference with VM Service Tech today.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/images/icons/fast-service.svg" alt="Fast Service Icon">
+                </div>
+                <h3>Fast Service</h3>
+                <p>Same-day or next-day appointments. Feel confident that our technicians will restore your appliance to working order as soon as possible.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/images/icons/upfront-pricing.svg" alt="Upfront Pricing Icon">
+                </div>
+                <h3>Upfront Pricing</h3>
+                <p>Before our technicians proceed to the appliance repair, they will explain you what they are going to do. You will never encounter surprise charges.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/images/icons/skilled-staff.svg" alt="Skilled Staff Icon">
+                </div>
+                <h3>Skilled Staff</h3>
+                <p>Our team of skilled technicians is equipped with the latest tools and techniques to diagnose and fix any issue with your appliances.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>We Service Major Domestic Appliances</h2>
+            <p>Whether you're dealing with a malfunctioning refrigerator, a faulty dishwasher, or any other appliance issue, you can count on VM Service Tech to provide fast, reliable service at competitive prices. Contact us today to schedule an appointment, and let us take care of all your appliance repair and installation needs in the Greater Montreal area. We understand the importance of having your appliances running smoothly. That's why we offer a comprehensive range of services to keep your household running efficiently. Whether you need a quick repair or a full installation, our team of skilled technicians is here to help.</p>
+            
+            <div class="alert">
+                <i class="alert-icon"></i>
+                <span>Currently we do not repair or install Gas Appliances</span>
+            </div>
+            
+            <div class="appliance-slider">
+                <buttonbutton class="slider-prev" title="Previous Slide"><i class="arrow-left"></i></button>
+                
+                <div class="appliance-slides">
+                    <div class="appliance-item">
+                        <img src="assets/images/stove.png" alt="Electric Stove/Range">
+                        <h4>Electric Stove/Range</h4>
+                        <p>Freestanding, Slide-In Electric/Induction Ranges</p>
+                    </div>
+                    
+                    <div class="appliance-item">
+                        <img src="assets/images/Cooktop.png" alt="Cooktop">
+                        <h4>Cooktop</h4>
+                        <p>Electric Cooktops, Induction Cooktops</p>
+                    </div>
+                    
+                    <div class="appliance-item">
+                        <img src="assets/images/Oven.png" alt="Electric Oven">
+                        <h4>Electric Oven</h4>
+                        <p>Conventional, Single/Double Wall Ovens, Convection and Microwave Ovens</p>
+                    </div>
+                    
+                    <div class="appliance-item">
+                        <img src="assets/images/Microwave.png" alt="Microwave">
+                        <h4>Microwave</h4>
+                        <p>Over-the-range Microwaves, Built-in Microwaves</p>
+                    </div>
+                    
+                    <div class="appliance-item">
+                        <img src="assets/images/Refrigerator.png" alt="Refrigerator">
+                        <h4>Refrigerator</h4>
+                        <p>Conventional Refrigerators, Side-by-Side, French Door, Freezerless Refrigerators</p>
+                    </div>
+                </div>
+                
+                <buttonbutton class="slider-next" title="Next Slide"><i class="arrow-right"></i></button>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            
+            <div class="alert">
+                <i class="alert-icon"></i>
+                <p>If you are looking for a small appliance repair services (kitchen countertop appliances or electronics), please contact Moderne Electronique at (514) 526-4690, or <a href="#">click here to get more information</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warranty Section -->
+    <section class="warranty">
+        <div class="container">
+            <div class="warranty-content">
+                <div class="warranty-image">
+                    <img src="assets/images/Warranty.png" alt="Warranty Badge">
+                    <a href="warranty.html" class="warranty-link">Warranty Policy</a>
+                </div>
+                
+                <div class="warranty-details">
+                    <h2>Warranty On Parts And Labor</h2>
+                    <p>Up to 1 Year Limited* Warranty on Parts and 90-Day Warranty on Labor applied from the date of service if the appliance was operated and maintained as per the manufacturer's manual. *The warranty on parts is limited by the warranty that the manufacturers or part suppliers offer.</p>
+                    <a href="#" class="learn-more">
+                        <i class="info-icon"></i>
+                        Learn more about Appliance Repair Warranty and Consumer Rights defined by Quebec provincial law.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment Section -->
+    <section class="book-appointment">
+        <div class="container">
+            <div class="appointment-content">
+                <div class="appointment-text">
+                    <h2>Book Appliance Repair</h2>
+                    <p>To schedule a service appointment for washing machine repair, you have two convenient options: you can either reach us by phone or fill out the request form on our website. Our dedicated customer service team will promptly contact you to arrange a convenient appointment. Moreover, we are accessible through email and SMS messages during our regular operating hours. We prioritize addressing all service inquiries within minutes.</p>
+                    
+                    <div class="availability">
+                        <div class="availability-item">
+                            <i class="calendar-icon"></i>
+                            <span>7 days a week</span>
+                        </div>
+                        <div class="availability-item">
+                            <i class="clock-icon"></i>
+                            <span>Mon - Fri: 8 AM - 8 PM</span>
+                        </div>
+                        <div class="availability-item">
+                            <i class="clock-icon"></i>
+                            <span>Sat - Sun: 9 AM - 5 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <i class="online-icon"></i>
+                            <span>Online Requests 24/7</span>
+                        </div>
+                        <div class="contact-option">
+                            <i class="message-icon"></i>
+                            <span>Text Messages</span>
+                        </div>
+                        <div class="contact-option">
+                            <i class="email-icon"></i>
+                            <span>Email</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="tel:(438)800-7676" class="btn btn-primary">
+                            <i class="phone-icon"></i>(438) 800-7676
+                        </a>
+                        <a href="booking.html" class="btn btn-secondary">Request Service</a>
+                    </div>
+                </div>
+                
+                <div class="appointment-image">
+                    <img src="assets/images/Appliance.jpg" alt="Technician with appliances">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Portal Section -->
+    <section class="client-portal">
+        <div class="container">
+            <div class="portal-content">
+                <div class="portal-image">
+                    <img src="assets/images/Self-Service-Client-Portal.webp" alt="Online Client Portal">
+                </div>
+                
+                <div class="portal-details">
+                    <h2>Online Self-Service Client Portal</h2>
+                    <p>The client portal serves as a central online hub where customers can access all the necessary information for their interactions with VM Service Tech. It offers a modern and professional experience, allowing clients to: view, approve, sign, and pay estimates and invoices; check past and upcoming service appointments; update contact and payment details; and schedule new services with us.</p>
+                    <a href="#" class="portal-link">
+                        <i class="info-icon"></i>
+                        Works client portal overview
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout">
+        <div class="container">
+            <div class="checkout-content">
+                <div class="checkout-text">
+                    <h2>Convenient Checkout</h2>
+                    <p>We offer an easy and secure payment options for our clients. Our technicians have payment terminals and are able to accept credit cards or debit cards on the spot. In addition, we offer online invoice payments from within your own personal client hub. This is a very convenient payment method for property owners and property management companies.</p>
+                    
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <i class="payment-icon"></i>
+                            <span>Payment Flexibility</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="onspot-icon"></i>
+                            <span>On-The-Spot Payment</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="secure-icon"></i>
+                            <span>Secure Payments</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="hub-icon"></i>
+                            <span>Personal Client Hub</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="allinone-icon"></i>
+                            <span>All in one place</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="booking-icon"></i>
+                            <span>Booking Management</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="tel:(438)800-7676" class="btn btn-primary">
+                            <i class="phone-icon"></i>(438) 800-7676
+                        </a>
+                        <a href="booking.html" class="btn btn-secondary">Request Service</a>
+                    </div>
+                </div>
+                
+                <div class="checkout-image">
+                    <img src="assets/images/Invoice-Online-Payment.webp" alt="Mobile payment screen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <p>At the heart of our values is a strong commitment to ensuring that every customer is delighted with their experience. We deeply appreciate the loyalty of our customers, understanding that they are the foundation of our business. Therefore, we prioritize your satisfaction above all else and dedicate ourselves to providing excellent services that meet your needs and exceed your expectations.</p>
+            
+            <div class="ratings-summary">
+                <div class="overall-rating">
+                    <span>All reviews</span>
+                    <strong>4.8</strong>
+                </div>
+                <div class="platform-ratings">
+                    <div class="platform">
+                        <i class="google-icon"></i>
+                        <span>Google</span>
+                        <strong>4.8</strong>
+                    </div>
+                    <div class="platform">
+                        <i class="facebook-icon"></i>
+                        <span>Facebook</span>
+                        <strong>5.0</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rating-stars">
+                <span class="rating-label">Excellent</span>
+                <div class="stars">
+                    <i class="star-filled"></i>
+                    <i class="star-filled"></i>
+                    <i class="star-filled"></i>
+                    <i class="star-filled"></i>
+                    <i class="star-filled"></i>
+                </div>
+                <span class="rating-count">4.8 | 244 reviews</span>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="reviewer">
+                        <img src="assets/images/testimonials/nathalie.jpg" alt="Nathalie Gelinas">
+                        <div class="reviewer-info">
+                            <strong>Nathalie Gelinas</strong>
+                            <span>il y a 3 mois</span>
+                        </div>
+                        <i class="google-icon"></i>
+                    </div>
+                    <div class="review-stars">
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="verified"></i>
+                    </div>
+                    <p class="review-text">Experience A1, prise de rendez-vous le jour même pour ma sécheuse. Le réparateur est arrivé une heure plus tôt. Il m'a avert par texto, la réparation a été très...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="reviewer">
+                        <img src="assets/images/testimonials/julie.jpg" alt="Julie racicot">
+                        <div class="reviewer-info">
+                            <strong>Julie racicot</strong>
+                            <span>il y a 3 mois</span>
+                        </div>
+                        <i class="google-icon"></i>
+                    </div>
+                    <div class="review-stars">
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="verified"></i>
+                    </div>
+                    <p class="review-text">Excellent service et rapide: du moment ou on prend un rendez-vous, le jour du rendez-vous. Le technicien arrive à l'heure prévue et travaille efficacement. Les prix sont...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="reviewer">
+                        <img src="assets/images/testimonials/jessica.jpg" alt="Jessica">
+                        <div class="reviewer-info">
+                            <strong>Jessica</strong>
+                            <span>il y a 4 mois</span>
+                        </div>
+                        <i class="google-icon"></i>
+                    </div>
+                    <div class="review-stars">
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="verified"></i>
+                    </div>
+                    <p class="review-text">Ma sécheuse ne faisait pas d'air chaud, ils sont venus très rapidement (le lendemain que je les ai contacté), et en 2h tous était réparé! Le prix est très bon et le technicien très gentil...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+            </div>
+            
+            <a href="reviews.html" class="see-more-link">
+                <i class="more-icon"></i>
+                See More
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p>Here, we've compiled answers to common questions you may have regarding how we determine our rates, accepted payment methods, the process for major repairs, and more. Read on to find out everything you need to know about our transparent pricing model and service procedures. Don't hesitate to contact us should you have any questions.</p>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>How long has VM Service Tech been serving Montreal area?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>What sets VM Service Tech apart from other appliance repair companies?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>Does VM Service Tech offer same-day repair services?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>What areas does VM Service Tech currently serve, and are there plans for further expansion?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>How experienced are the technicians at VM Service Tech?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>What is VM Service Tech's approach to ensuring customer satisfaction?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>Can VM Service Tech handle both residential and commercial appliance repair needs?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>Are there any warranties or guarantees on the repair services provided by VM Service Tech?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>How can I schedule an appointment with VM Service Tech for appliance repair services?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <!-- Answer will be displayed when clicked -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2>Explore Our Latest Blog Posts</h2>
+            <p>Discover fresh insights and valuable information by exploring our latest blog posts! From expert tips to industry trends, there's something for everyone. Dive in now and stay ahead of the curve with our timely content updates!</p>
+            
+            <div class="blog-posts">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/blog/microwave-installation.jpg" alt="Microwave installation">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Over-The-Range Microwave Installation: The Essential Guide</h3>
+                        <span class="blog-date">2023-03-04</span>
+                        <p>Are you looking for over-the-range microwave installation guidelines? Whether you're replacing an old unit or</p>
+                        <a href="#" class="read-more">Read More »</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/blog/appliance-installation.jpg" alt="Appliance installation">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Appliance Installation: 9 Easy Steps To Get Ready</h3>
+                        <span class="blog-date">2023-02-07</span>
+                        <p>Appliance Installation can be an exciting yet daunting task. Whether you're upgrading your laundry room</p>
+                        <a href="#" class="read-more">Read More »</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/blog/refrigerator-guide.jpg" alt="Refrigerator troubleshooting">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Troubleshooting Refrigerator Issues: A Comprehensive Guide</h3>
+                        <span class="blog-date">2023-02-16</span>
+                        <p>In the heart of every household kitchen lies the indispensable refrigerator, diligently preserving our perishables</p>
+                        <a href="#" class="read-more">Read More »</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-pagination">
+                <a href="#" class="prev-page">« Previous</a>
+                <a href="#" class="next-page">Next »</a>
+            </div>
+            
+            <a href="blog.html" class="discover-blogs">
+                <i class="blog-icon"></i>
+                Discover Our Blogs
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-button facebook">
+                    <i class="facebook-icon"></i>
+                </a>
+                <a href="#" class="social-button twitter">
+                    <i class="twitter-icon"></i>
+                </a>
+                <a href="#" class="social-button whatsapp">
+                    <i class="whatsapp-icon"></i>
+                </a>
+                <a href="#" class="social-button telegram">
+                    <i class="telegram-icon"></i>
+                </a>
+            </div>
+            
+            <!-- Footer content here -->
+        </div>
+    </footer>
+</body>
+</html>

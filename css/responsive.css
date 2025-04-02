@@ -1,0 +1,221 @@
+/* ====== RESPONSIVE STYLES ====== */
+
+/* Large desktop (1200px and above) */
+@media (min-width: 1200px) {
+    /* No specific adjustments needed here, base styles apply */
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    .appliance-item {
+        flex: 0 0 25%;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    /* Header & Navigation */
+    .secondary-nav a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    .main-nav li {
+        margin-left: 15px;
+    }
+    
+    /* Hero Section */
+    .hero-section .container {
+        flex-direction: column-reverse;
+    }
+    
+    .hero-content, .hero-image {
+        flex: 1 0 100%;
+    }
+    
+    .hero-image {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    /* Features Section */
+    .features .container {
+        flex-direction: column;
+    }
+    
+    .feature-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Appointment, Portal, Checkout Sections */
+    .appointment-content,
+    .portal-content,
+    .checkout-content {
+        flex-direction: column;
+    }
+    
+    .appointment-text,
+    .portal-details,
+    .checkout-text {
+        order: 2;
+    }
+    
+    .appointment-image,
+    .portal-image,
+    .checkout-image {
+        order: 1;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    /* Testimonials */
+    .testimonial-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Blog */
+    .blog-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .blog-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+    
+    /* Top Navigation */
+    .top-nav .container {
+        flex-direction: column;
+    }
+    
+    .social-icons {
+        margin-bottom: 10px;
+    }
+    
+    /* Main Header */
+    .main-header .container {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav li {
+        margin: 5px 10px;
+    }
+    
+    /* CTA Buttons */
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    /* Service Areas */
+    .service-areas {
+        justify-content: center;
+    }
+    
+    /* Warranty Section */
+    .warranty-content {
+        flex-direction: column;
+    }
+    
+    /* Payment Options */
+    .payment-option {
+        flex-basis: 45%;
+    }
+    
+    /* Rating Summary */
+    .ratings-summary {
+        flex-direction: column;
+    }
+    
+    .overall-rating {
+        margin-bottom: 15px;
+    }
+}
+
+/* Small Mobile (up to 575px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .secondary-nav {
+        display: none; /* Hide secondary nav on small screens */
+    }
+    
+    .appliance-item {
+        flex: 0 0 100%;
+    }
+    
+    .payment-option {
+        flex-basis: 100%;
+    }
+    
+    .rating-stars {
+        flex-direction: column;
+    }
+    
+    .stars {
+        margin: 10px 0;
+    }
+}
