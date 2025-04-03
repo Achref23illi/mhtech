@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dryer Repair Services | VM Service Tech</title>
+    <meta name="description" content="Expert dryer repair services in Montreal. We diagnose and fix common dryer problems including startup issues, heating problems, drum not turning, excessive noise, and mid-cycle stoppages.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/refrigerator-repair.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/form.js" defer></script>
+</head>
+<body>
+    <!-- Top navigation bar -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="facebook-icon"></i></a>
+                <a href="#" aria-label="YouTube"><i class="youtube-icon"></i></a>
+            </div>
+            <div class="secondary-nav">
+                <a href="about.html">About</a>
+                <a href="terms.html">Terms And Conditions</a>
+                <a href="warranty.html">Warranty</a>
+                <a href="cancellation.html">Cancellation Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main header with navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="VM Service Tech - Home Appliance Repair Service">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul class="primary-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown active">
+                        <a href="repair.html">Repair<svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div id="repair-dropdown" class="mega-dropdown">
+                            <div class="container">
+                                <div class="dropdown-items">
+                                    <a href="refrigerator-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="4" y1="10" x2="20" y2="10"></line><line x1="12" y1="14" x2="12" y2="16"></line></svg>
+                                        <span>Refrigerator Repair</span>
+                                    </a>
+                                    <a href="washer-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+                                        <span>Washer Repair</span>
+                                    </a>
+                                    <a href="dryer-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path></svg>
+                                        <span>Dryer Repair</span>
+                                    </a>
+                                    <a href="dishwasher-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg>
+                                        <span>Dishwasher Repair</span>
+                                    </a>
+                                    <a href="stove-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><circle cx="8" cy="8" r="2"></circle><circle cx="16" cy="8" r="2"></circle></svg>
+                                        <span>Stove Repair</span>
+                                    </a>
+                                    <a href="oven-repair.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="4" y1="8" x2="20" y2="8"></line></svg>
+                                        <span>Oven Repair</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="installation.html">Installation<svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div id="installation-dropdown" class="mega-dropdown">
+                            <div class="container">
+                                <div class="dropdown-items">
+                                    <a href="appliance-installation.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path></svg>
+                                        <span>Appliance Installation</span>
+                                    </a>
+                                    <a href="washer-installation.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+                                        <span>Washer Installation</span>
+                                    </a>
+                                    <a href="dryer-installation.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path></svg>
+                                        <span>Dryer Installation</span>
+                                    </a>
+                                    <a href="dishwasher-installation.html" class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg>
+                                        <span>Dishwasher Installation</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="fr/secheuse-reparation.html">FR</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> &gt;
+                <a href="repair.html">Appliance Repair</a> &gt;
+                <span>Dryer Repair</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Dryer Repair</h1>
+                <p>Our dryer repair service ensures your appliance runs smoothly and efficiently, restoring it to peak performance. Our skilled technicians are equipped to handle a range of issues, from simple fixes to complex repairs, with precision and care. We prioritize quick and reliable dryer repair service, minimizing downtime and extending the life of your dryer. Trust us to get your appliance back in top shape with minimal hassle and maximum satisfaction.</p>
+                
+                <div class="service-areas">
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>Montreal</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>Vaudreuil-Dorion</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>North Shore</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>West Island</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>Laval</span>
+                    </div>
+                    <div class="area">
+                        <i class="location-icon"></i>
+                        <span>South Shore</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="tel:(438)800-7676" class="btn btn-primary">
+                        <i class="phone-icon"></i>(438) 800-7676
+                    </a>
+                    <a href="booking.html" class="btn btn-secondary">Request Service</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/Clothes-Dryer-Repair.webp" alt="Technician repairing dryer">
+            </div>
+        </div>
+    </section>
+
+    <section class="brand-logos">
+        <div class="container">
+            <div class="logos-slider-container">
+                <div class="logos-slider">
+                    <div class="logo-item">
+                        <img src="assets/images/brands/Moffat.png" alt="Moffat">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/brands/Maytag-logo.png" alt="Maytag">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/brands/LG.webp" alt="LG">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/brands/KitchenAid.webp" alt="KitchenAid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/brands/GE-Appliances.webp" alt="GE Appliances">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/brands/Kenmore.webp" alt="Kenmore">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/brands/Bosch.webp" alt="Bosch">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/brands/Frigidaire.webp" alt="Frigidaire">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Details Section -->
+    <section class="info-ready">
+        <div class="container">
+            <h2>Key Details Of Request</h2>
+            <p>When you place a request for dryer repair, it's crucial for us to gather certain key information to ensure a swift and effective service. To streamline the process and expedite your repair, we kindly ask for details such as the make and model of the appliance, a description of the issue you're experiencing, any error codes displayed, and your preferred contact information. Providing this essential data helps our technicians come prepared with the necessary tools and parts, ultimately minimizing downtime and ensuring a seamless dryer repair experience.</p>
+            
+            <div class="info-checklist">
+                <div class="info-item">
+                    <i class="check-icon"></i>
+                    <span>Brand Name</span>
+                </div>
+                <div class="info-item">
+                    <i class="check-icon"></i>
+                    <span>Model ID</span>
+                </div>
+                <div class="info-item">
+                    <i class="check-icon"></i>
+                    <span>Error Codes Displayed</span>
+                </div>
+                <div class="info-item">
+                    <i class="check-icon"></i>
+                    <span>Description Of The Issue</span>
+                </div>
+                <div class="info-item">
+                    <i class="check-icon"></i>
+                    <span>Address And Postal Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Dryer Problems Section -->
+    <section class="problems-section">
+        <div class="container">
+            <h2>Common Dryer Problems</h2>
+            <p>Dryers can experience a variety of issues that affect their performance. Our technicians are trained to diagnose and repair all common dryer problems including:</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>Dryer Won't Start</h3>
+                    <p>The dryer does not turn on or respond when you press the start button, which can be due to issues with the power supply, door switch, or control settings.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Dryer Not Heating</h3>
+                    <p>The dryer operates normally but fails to produce any heat, leaving clothes damp after a cycle. This issue can be caused by problems with the heating element, thermostat, or thermal fuse.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Dryer Drum Not Turning</h3>
+                    <p>The drum does not spin when the appliance is running, preventing clothes from tumbling and drying properly. This problem could be related to a broken drive belt, malfunctioning motor, or faulty drum rollers.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Excessive Noise</h3>
+                    <p>The dryer produces loud or unusual noises during operation, such as banging, squealing, or rattling. This can indicate issues such as worn drum bearings, foreign objects in the drum, or a loose drive belt.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Clothes Taking Too Long To Dry</h3>
+                    <p>Clothes remain damp or take significantly longer to dry than usual, even after a full cycle. Potential causes include a clogged lint filter, obstructed venting system, or overloading the dryer.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Dryer Stopping Mid-Cycle</h3>
+                    <p>The dryer unexpectedly stops working before completing its drying cycle. This issue may be due to overheating, a faulty thermal fuse, or electrical problems. This expanded description should help provide a clearer understanding of each common dryer issue.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Error Codes</h3>
+                    <p>Modern dryers often display error codes when malfunctions occur. Our technicians are well-versed in interpreting these codes and diagnosing the underlying issues for all major brands and models.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Burning Smell</h3>
+                    <p>A burning odor during operation can indicate serious issues such as a damaged heating element, overheated motor, or electrical problems that require immediate professional attention.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Dryer Overheating</h3>
+                    <p>When your dryer gets too hot, it can damage clothes and create a safety hazard. This may be caused by a clogged vent, faulty temperature sensor, or issues with the cycling thermostat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repair Process Section -->
+    <section class="repair-process">
+        <div class="container">
+            <h2>Our Dryer Repair Process</h2>
+            <p>VM Service Tech takes a systematic approach to dryer repair, ensuring efficient diagnoses and effective solutions. Our repair process includes:</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Assessment</h3>
+                        <p>Our technician will conduct a thorough inspection of your dryer, checking all components and systems to identify the source of the problem.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Detailed Diagnosis</h3>
+                        <p>Once the issue is identified, we'll explain the problem in clear terms, including what caused it and what's needed to fix it.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Upfront Pricing</h3>
+                        <p>Before proceeding with repairs, we provide a transparent cost estimate covering parts and labor, so you know exactly what to expect.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Expert Repair</h3>
+                        <p>Our skilled technicians will perform the necessary repairs using high-quality parts and specialized tools to ensure your dryer functions properly.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Operational Testing</h3>
+                        <p>After completing the repair, we'll test your dryer to ensure it's operating correctly and efficiently.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Maintenance Advice</h3>
+                        <p>We provide tips and recommendations to help maintain your dryer's performance and extend its lifespan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands We Service Section -->
+    <section class="brands-section">
+        <div class="container">
+            <h2>Dryer Brands We Service</h2>
+            <p>VM Service Tech technicians are expertly trained to repair dryers from all major manufacturers, ensuring that no matter what brand you own, we can provide the necessary service.</p>
+            
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <img src="assets/images/brands/Moffat.png" alt="Moffat">
+                    <span>Moffat</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/Maytag-logo.png" alt="Maytag">
+                    <span>Maytag</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/LG.webp" alt="LG">
+                    <span>LG</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/KitchenAid.webp" alt="KitchenAid">
+                    <span>KitchenAid</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/GE-Appliances.webp" alt="GE Appliances">
+                    <span>GE Appliances</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/Kenmore.webp" alt="Kenmore">
+                    <span>Kenmore</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/Bosch.webp" alt="Bosch">
+                    <span>Bosch</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/Frigidaire.webp" alt="Frigidaire">
+                    <span>Frigidaire</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/Samsung.png" alt="Samsung">
+                    <span>Samsung</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/Whirlpool_Corporation_Logo.png" alt="Whirlpool">
+                    <span>Whirlpool</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/amana-logo-png-transparent.png" alt="Amana">
+                    <span>Amana</span>
+                </div>
+                <div class="brand-item">
+                    <img src="assets/images/brands/Electrolux.webp" alt="Electrolux">
+                    <span>Electrolux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2>Dryer Repair Pricing</h2>
+            <p>At VM Service Tech, we believe in transparent pricing for all our dryer repair services. Our pricing structure is straightforward and includes:</p>
+            
+            <div class="pricing-info">
+                <div class="price-item">
+                    <h3>Diagnostic Fee</h3>
+                    <p>Our standard diagnostic fee is $85, which covers the technician's visit and comprehensive assessment of your dryer. This fee is waived if you proceed with our repair service.</p>
+                </div>
+                
+                <div class="price-item">
+                    <h3>Repair Costs</h3>
+                    <p>After diagnosis, we provide a clear estimate that includes both parts and labor. Our technicians explain all repairs needed before proceeding, ensuring no surprise charges.</p>
+                </div>
+                
+                <div class="price-item">
+                    <h3>Warranty</h3>
+                    <p>All our dryer repairs come with up to a 1-year warranty on parts and a 90-day warranty on labor, giving you peace of mind about the quality of our work.</p>
+                </div>
+            </div>
+            
+            <a href="rates.html" class="btn btn-secondary">View Detailed Pricing</a>
+        </div>
+    </section>
+
+    <!-- Maintenance Tips Section -->
+    <section class="maintenance-tips">
+        <div class="container">
+            <h2>Dryer Maintenance Tips</h2>
+            <p>Proper maintenance can extend the life of your dryer and prevent common issues. Here are some helpful tips to keep your dryer running efficiently:</p>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>Clean the Lint Filter</h3>
+                    <p>Clean the lint filter before or after each load to improve air circulation, reduce drying time, and prevent fire hazards.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>Check and Clean Vents</h3>
+                    <p>Inspect and clean the exterior vent hood and ductwork annually to ensure proper airflow and prevent lint buildup that can cause overheating.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>Don't Overload</h3>
+                    <p>Avoid overloading your dryer, as this can strain the motor and drum, increase drying time, and lead to uneven drying.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>Clean the Drum</h3>
+                    <p>Wipe down the drum periodically with a mild detergent solution to remove residue from fabric softeners and dryer sheets.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>Check the Exhaust System</h3>
+                    <p>Ensure the exhaust system is properly connected and not crushed or restricted, as this can cause overheating and inefficient operation.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>Inspect Door Seal</h3>
+                    <p>Check the door seal regularly for wear or damage, and clean it to ensure it creates a proper seal when the dryer is operating.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Service Section -->
+    <section class="request-service">
+        <div class="container">
+            <h2>Request Dryer Repair Service</h2>
+            <p>Don't let a faulty dryer throw off your routine. Reach out to VM Service Tech now for prompt, dependable, and cost-effective dryer repair. Our approachable customer service team is here to set up an appointment for your dryer repair and address any questions you might have.</p>
+            
+            <div class="availability">
+                <div class="availability-item">
+                    <i class="calendar-icon"></i>
+                    <span>7 days a week</span>
+                </div>
+                <div class="availability-item">
+                    <i class="clock-icon"></i>
+                    <span>Mon - Fri: 8 AM - 8 PM</span>
+                </div>
+                <div class="availability-item">
+                    <i class="clock-icon"></i>
+                    <span>Sat - Sun: 9 AM - 5 PM</span>
+                </div>
+            </div>
+            
+            <div class="contact-options">
+                <div class="contact-option">
+                    <i class="online-icon"></i>
+                    <span>Online Requests 24/7</span>
+                </div>
+                <div class="contact-option">
+                    <i class="message-icon"></i>
+                    <span>Text Messages</span>
+                </div>
+                <div class="contact-option">
+                    <i class="email-icon"></i>
+                    <span>Email</span>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="tel:(438)800-7676" class="btn btn-primary">
+                    <i class="phone-icon"></i>(438) 800-7676
+                </a>
+                <a href="booking.html" class="btn btn-secondary">Request Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Self-Service Client Portal Section -->
+    <section class="client-portal">
+        <div class="container">
+            <div class="portal-content">
+                <div class="portal-image">
+                    <img src="assets/images/Self-Service-Client-Portal.webp" alt="Online Client Portal">
+                </div>
+                
+                <div class="portal-details">
+                    <h2>Online Self-Service Client Portal</h2>
+                    <p>The client portal serves as a central online hub where customers can access all the necessary information for their interactions with VM Service Tech. It offers a modern and professional experience, allowing clients to: view, approve, sign, and pay estimates and invoices; check past and upcoming service appointments; update contact and payment details; and schedule new services with us.</p>
+                    <a href="#" class="portal-link">
+                        <i class="info-icon"></i>
+                        Works client portal overview
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Convenient Checkout Section -->
+    <section class="checkout">
+        <div class="container">
+            <div class="checkout-content">
+                <div class="checkout-text">
+                    <h2>Convenient Checkout</h2>
+                    <p>We offer easy and secure payment options for our clients. Our technicians are equipped with payment terminals to accept credit and debit cards right at your location. You can also pay your invoice online through your personal client hub. This is a very convenient payment method for property owners and property management companies.</p>
+                    
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <i class="payment-icon"></i>
+                            <span>Payment Flexibility</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="onspot-icon"></i>
+                            <span>On-The-Spot Payment</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="secure-icon"></i>
+                            <span>Secure Payments</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="hub-icon"></i>
+                            <span>Personal Client Hub</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="allinone-icon"></i>
+                            <span>All in one place</span>
+                        </div>
+                        <div class="payment-option">
+                            <i class="booking-icon"></i>
+                            <span>Booking Management</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="tel:(438)800-7676" class="btn btn-primary">
+                            <i class="phone-icon"></i>(438) 800-7676
+                        </a>
+                        <a href="booking.html" class="btn btn-secondary">Request Service</a>
+                    </div>
+                </div>
+                
+                <div class="checkout-image">
+                    <img src="assets/images/Invoice-Online-Payment.webp" alt="Mobile payment screen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <p>Our core values center on a strong commitment to ensuring every customer has a delightful experience. We deeply appreciate our customers' loyalty, as they are the foundation of our business. As a result, we prioritize your satisfaction and are dedicated to providing exceptional services that meet your needs and exceed your expectations.</p>
+            
+            <div class="ratings-summary">
+                <div class="overall-rating">
+                    <span>All reviews</span>
+                    <strong>4.8</strong>
+                </div>
+                <div class="platform-ratings">
+                    <div class="platform">
+                        <i class="google-icon"></i>
+                        <span>Google</span>
+                        <strong>4.8</strong>
+                    </div>
+                    <div class="platform">
+                        <i class="facebook-icon"></i>
+                        <span>Facebook</span>
+                        <strong>5.0</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rating-stars">
+                <span class="rating-label">Excellent</span>
+                <div class="stars">
+                    <i class="star-filled"></i>
+                    <i class="star-filled"></i>
+                    <i class="star-filled"></i>
+                    <i class="star-filled"></i>
+                    <i class="star-filled"></i>
+                </div>
+                <span class="rating-count">4.8 | 244 reviews</span>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="reviewer">
+                        <img src="assets/images/testimonials/nathalie.jpg" alt="Nathalie Gelinas">
+                        <div class="reviewer-info">
+                            <strong>Nathalie Gelinas</strong>
+                            <span>il y a 3 mois</span>
+                        </div>
+                        <i class="google-icon"></i>
+                    </div>
+                    <div class="review-stars">
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="verified"></i>
+                    </div>
+                    <p class="review-text">Experience A1, prise de rendez-vous le jour même pour ma sécheuse. Le réparateur est arrivé une heure plus tôt. Il m'a avert par texto, la réparation a été très...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="reviewer">
+                        <img src="assets/images/testimonials/julie.jpg" alt="Julie racicot">
+                        <div class="reviewer-info">
+                            <strong>Julie racicot</strong>
+                            <span>il y a 3 mois</span>
+                        </div>
+                        <i class="google-icon"></i>
+                    </div>
+                    <div class="review-stars">
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="verified"></i>
+                    </div>
+                    <p class="review-text">Excellent service et rapide: du moment ou on prend un rendez-vous, le jour du rendez-vous. Le technicien arrive à l'heure prévue et travaille efficacement. Les prix sont...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="reviewer">
+                        <img src="assets/images/testimonials/jessica.jpg" alt="Jesseca">
+                        <div class="reviewer-info">
+                            <strong>Jesseca</strong>
+                            <span>il y a 3 mois</span>
+                        </div>
+                        <i class="google-icon"></i>
+                    </div>
+                    <div class="review-stars">
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="star-filled"></i>
+                        <i class="verified"></i>
+                    </div>
+                    <p class="review-text">Ma sécheuse ne faisait pas d'air chaud, ils sont venus très rapidement (le lendemain que je les ai contacté), et en 2h tous était réparé! Le prix est très bon et le technicien très gentil...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+            </div>
+            
+            <a href="reviews.html" class="see-more-link">
+                <i class="more-icon"></i>
+                See More
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p>Here, we've compiled answers to common questions about dryer repairs, maintenance, and our service process. If you don't find the information you're looking for, please contact us directly.</p>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>Can I fix my dryer myself, or should I hire a professional?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While some minor dryer issues can be handled by homeowners (like cleaning the lint filter or checking the power connection), most repairs require professional attention. Dryers involve both electrical components and moving parts that can be dangerous without proper training. Additionally, DIY repairs can potentially void warranties or cause further damage. Our technicians have the expertise, tools, and safety training to properly diagnose and repair your dryer.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>What can cause a dryer to overheat?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Several factors can cause dryer overheating: 1) Restricted airflow due to lint buildup in the filter, vent, or exhaust duct; 2) A malfunctioning thermostat that fails to regulate temperature; 3) A faulty heating element remaining on constantly; 4) A blocked external vent hood; 5) Improper installation with kinked or crushed vent hoses. Overheating is a serious issue that can damage clothes and pose a fire hazard, so it should be addressed promptly by a professional.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>Why is my dryer making a loud noise?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unusual noises from your dryer can indicate various issues: 1) Thumping or banging often suggests worn drum bearings or rollers; 2) Squealing typically points to a worn belt or idler pulley; 3) Scraping noises may indicate a foreign object caught in the drum or a worn drum glide; 4) Rattling could be from loose hardware or objects in the drum or lint trap. Our technicians can precisely diagnose the cause of the noise and make the necessary repairs to restore quiet operation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>My dryer is not drying clothes properly. What could be wrong?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If your clothes aren't drying properly, several issues could be responsible: 1) Clogged lint filter or vent duct restricting airflow; 2) Malfunctioning heating element not producing adequate heat; 3) Faulty thermostat or thermal fuse; 4) Overloading the dryer with too many clothes; 5) Incorrect cycle selection for the type of load; 6) Issues with the dryer's motor or belt affecting tumbling. Our technicians can diagnose the specific cause and recommend the appropriate repair solution.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>How can I prevent my dryer from breaking down?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Regular maintenance is key to preventing dryer breakdowns: 1) Clean the lint filter before or after every load; 2) Have the vent duct and exhaust professionally cleaned annually; 3) Avoid overloading the dryer; 4) Check and clean the exterior vent hood regularly; 5) Keep the area around the dryer clean and free of dust; 6) Ensure proper installation with correct venting; 7) Follow the manufacturer's usage guidelines; 8) Schedule periodic professional maintenance checks. These steps will extend your dryer's lifespan and improve efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="plus-icon"></i>
+                        <h3>What should I do if my dryer stops mid-cycle?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If your dryer stops during a cycle: 1) Check if it's still receiving power; 2) Make sure the door is fully closed and latched; 3) Verify that the dryer isn't overloaded; 4) Allow the dryer to cool down if it stopped due to overheating; 5) Reset any tripped circuit breakers; 6) Check for and clear any error codes on digital displays. If the problem persists after these checks, it's best to call a professional as the issue could involve internal components like the thermal fuse, motor, or control board.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2>Explore Our Latest Blog Posts</h2>
+            <p>Uncover new perspectives and useful information by checking out our newest blog posts! Whether you're looking for expert advice or the latest industry trends, we have something for everyone. Jump in now and stay ahead with our up-to-date content!</p>
+            
+            <div class="blog-posts">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/Over-the-stove-microwave-installation.webp" alt="Microwave installation">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Over-The-Range Microwave Installation: The Essential Guide</h3>
+                        <span class="blog-date">2023-03-04</span>
+                        <p>Are you looking for over-the-range microwave installation guidelines? Whether you're replacing an old unit or</p>
+                        <a href="#" class="read-more">Read More »</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/Appliance-Installation-Services-VM-Service-Tech.webp" alt="Appliance installation">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Appliance Installation: 9 Easy Steps To Get Ready</h3>
+                        <span class="blog-date">2023-02-07</span>
+                        <p>Appliance Installation can be an exciting yet daunting task. Whether you're upgrading your laundry room</p>
+                        <a href="#" class="read-more">Read More »</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/Technician-Is-Troubleshooting-Refrigerator-Issues.webp" alt="Refrigerator troubleshooting">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Troubleshooting Refrigerator Issues: A Comprehensive Guide</h3>
+                        <span class="blog-date">2023-02-16</span>
+                        <p>In the heart of every household kitchen lies the indispensable refrigerator, diligently preserving our perishables</p>
+                        <a href="#" class="read-more">Read More »</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-pagination">
+                <a href="#" class="prev-page">« Previous</a>
+                <a href="#" class="next-page">Next »</a>
+            </div>
+            
+            <a href="blog.html" class="discover-blogs">
+                <i class="blog-icon"></i>
+                Discover Our Blogs
+            </a>
+        </div>
+    </section>
+
+    <!-- Areas We Serve Section -->
+    <section class="service-areas-section">
+        <div class="container">
+            <h2>Areas We Serve For Dryer Repair</h2>
+            <p>VM Service Tech provides professional dryer repair services throughout the Greater Montreal area, including:</p>
+            
+            <div class="areas-grid">
+                <div class="area-column">
+                    <h3>Montreal</h3>
+                    <ul>
+                        <li>Downtown Montreal</li>
+                        <li>NDG</li>
+                        <li>Westmount</li>
+                        <li>Plateau Mont-Royal</li>
+                        <li>Ville-Marie</li>
+                        <li>Outremont</li>
+                    </ul>
+                </div>
+                
+                <div class="area-column">
+                    <h3>West Island</h3>
+                    <ul>
+                        <li>Pointe-Claire</li>
+                        <li>Kirkland</li>
+                        <li>Beaconsfield</li>
+                        <li>Dollard-des-Ormeaux</li>
+                        <li>Pierrefonds</li>
+                        <li>Roxboro</li>
+                    </ul>
+                </div>
+                
+                <div class="area-column">
+                    <h3>North Shore</h3>
+                    <ul>
+                        <li>Laval</li>
+                        <li>Terrebonne</li>
+                        <li>Blainville</li>
+                        <li>Rosemère</li>
+                        <li>Saint-Eustache</li>
+                        <li>Boisbriand</li>
+                    </ul>
+                </div>
+                
+                <div class="area-column">
+                    <h3>South Shore</h3>
+                    <ul>
+                        <li>Brossard</li>
+                        <li>Longueuil</li>
+                        <li>Saint-Lambert</li>
+                        <li>Saint-Hubert</li>
+                        <li>Chambly</li>
+                        <li>Saint-Jean-sur-Richelieu</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p class="service-area-note">Don't see your area listed? Contact us to confirm service availability in your location.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo-white.png" alt="VM Service Tech - Home Appliance Repair Service">
+                    <p>We take pride in being one of the top appliance repair and installation companies that you can rely on for all your household needs. With a passion for excellence and a commitment to customer satisfaction, we have been serving homeowners across the Greater Montreal.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Contact Us</h3>
+                        <p><strong>Phone:</strong> (438) 800-7676</p>
+                        <p><strong>Hours:</strong></p>
+                        <p>Mon - Fri: 8 AM - 8 PM</p>
+                        <p>Sat - Sun: 9 AM - 5 PM</p>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h3>Important Links</h3>
+                        <ul>
+                            <li><a href="terms.html">Terms And Conditions</a></li>
+                            <li><a href="warranty.html">Warranty</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="reviews.html">Reviews</a></li>
+                            <li><a href="blog.html">Our Blog</a></li>
+                            <li><a href="rates.html">Rates</a></li>
+                            <li><a href="sitemap.html">Site Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-button facebook">
+                    <i class="facebook-icon"></i>
+                </a>
+                <a href="#" class="social-button twitter">
+                    <i class="twitter-icon"></i>
+                </a>
+                <a href="#" class="social-button whatsapp">
+                    <i class="whatsapp-icon"></i>
+                </a>
+                <a href="#" class="social-button telegram">
+                    <i class="telegram-icon"></i>
+                </a>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 - VM Service Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </a>
+
+    <script src="js/refrigerator-repair.js" defer></script>
+</body>
+</html>
